@@ -4,6 +4,9 @@
 
 # load libraries
 library(readr)
+library(ggplot2)
+library(dplyr)
+
 
 # The data files are not included in the repository
 # They can be downloaded from the source given above
@@ -14,5 +17,41 @@ order_products_train <- read_csv("data/order_products__train.csv")
 orders <- read_csv("data/orders.csv")
 producst <- read_csv("data/products.csv")
 sample_submission <- read_csv("data/sample_submission.csv")
+
+
+# The distribution of all of the orders according to the hours of a day
+hist(as.numeric(orders$order_hour_of_day),
+     main = "Hours of the Orders",
+     xlab = "Hour of day",
+     ylab = "Order count",
+     xlim = c(0, 25))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
